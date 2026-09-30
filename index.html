@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cüzdan</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cüzdan">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="application-name" content="Cüzdan">
+<meta name="theme-color" content="#1D4E4A">
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAQsklEQVR42u2deYxd1X3Hf7/fOXd76yxg8DI2ZuyZxGUzBAiE1BgQSUxwFhZVitqoUheavyr6RytFVZt0U1sRKVWUSlFaElUlAZWkpRKBmpTiEIwDxiw2tsEe7x5njMcznvfefffes/SPO7ZZbM+8N2+Z9+b31ch/jGbG797zOb/tnPM7OLBxA7AuKmutl824vm+tnf1vIaJSqjp5GhA79MGJx342wyykrOMXdRzbTn5whmNmu0FEJERNZiO1NzpOOtdsMByzGGMAISXWOMaIqJUyWmMnPzvDMYt35NTjU4xSttMfnMd+BhsAQELUYW90ooDh6HI4hMDaAw6jtVEKERmObk5iSVAdAYfVulaeGI7OkxCijumvOz/gYDhm5VYWZsDBcMwcjdYDhzHWmE4POBiOmeAgIqJaq+ZGa2sMW47uh6MOA2CNsV3x+AzHxVIVRKyj/m21BoZjIViOeqJRbRiO7hcJqtVuWGut1l0QjTIczfFG1nbJ3ODRvEgeS3Vs4+gWMhiORvOEaIzpjjyW4WAxHPWagXqyFXYrC4YOrHl3oNaW4WCxW2ExHCwWw8FiOFgMB4vhYDEc80x1LaEhETIcC4KN2reC1lFUZThYDMeCV33bThmOTnMrAKbG3aB1bztlODoy7qjHeDAcCyQmrcet1HjUheHoSBlV8/p7fS0bGI7OdCu12wASxHB0e96Rbgitw7PUdTCf4ei8mKPWOpi1tmuyWYZjhqE2tW8lJ6LuqJMyHBdlo66Dr2nfUu7sswASlro2DNfXgJDh6LSYVOlaExYLQLW3LmU4OtByGGOMqa0injY9po6vdsxL64dAOG+otRatFbX393F8Nw6r0MnHnOYXHIiYXjYQJZGeHy1QrLWxVl42Z62p6UFUklTLZSGl67pp76iOo2QewUFEcRwnSVLsKa5avWpgYIAEgbVtXuS0Fomk72EtI2vBImJpYvLA/gPHjo2WSuUg8IUQpqPOWMv5Q0a5XF6ydMm629cNDa/u6+sTUiDMk5gunfQ1fZjpn4/jeGxs7K033tr8wi8q5Yof+B3EB86Hy3gQMQzDW2695Qtf2pjL5apRVSvdHQubiOg4jud5R48ee/xHj+/buy+TyXQKH+2Hg4gqlcp9D9y3/o7bwzBUSlEXbaZKzY4xxvM8RPzRYz/eumVrNpvtCD6o7WSUy+VbPnXL+jtuL5VKxhghRDeRkRoPIUQcx1rr+++/b/mK5dVqlTqhvk7tfWtxHC9ZsuQLX9wYhmGaqnRrvYSIlFKe7z3w4P2O45hOaHHcZjiSJFm3fl0ul1OdfwHFbPgIw/DKwSuvu/66dDIwHBeuBChV7CkODw91ipltiLTW11xzNXXCVkJqr9lYtmxZb1+v7pbGnbN86oGBgf7+PgRwpJRCCBLzMwaX7Z1DA8sHpJTVanXhwKG1LhQLfja798DBTBAYY4hICPIc13UcBDDzpnV6m4tgC8ebnOMDIFHqtzfcU/3Up1EIgXRkbGz/saMHRo8dPTFmjM0FGSlIz4NcVwKr9TlaknzlsxsW+Zmz30yMPjEx8druXU9s2rR5+7bJcrmYy9W3g7VL4EAAWhje5KN8TJZLgYXEaJxebcSefP6eW2+759bbdu4f+eb3v/fsy1uKuRwhmvbxIdv4ggxAJYo+Gm1g+k+XYkPprCCSQlg895xKqckkAWuHV1zx2F/97ff+88m//td/AQDXcdpVTpXtIkNrLYW4YWg4SZKUDwQARGOtMsZ2VbPXD8kaCw6R/cg7EYgAUKmGgPi1Lz9w7dDw737jL6YqFc9128JHe9ZWBNGpqalvP/wnX7z7M0/s3O4JYQESYyxYXzgF18s4TtH1a10J7Qw0rBVEq3v6L+5SE6X6cvlf7X77wT/7U6WVqP1u2460HFKIk5OTX/38vV/dcO9EpdzrB+PVUBItymSvKPQuzuYz0hFdXUoHgHimrUyOlOOlqZs+tuabD/3RHz/yj8VcTnc9HERUDsM1K6/8xh88VIqqvpTLcsVI61sWD1yezROiNsZYq60B28VszOokviPlqXLpdz674cXXtz/x3Ka+QkG1dndcyy2HtRbgL//woZ5sbqJcQimHevuHevuz0o2MhrS/RRqOLsQ85jxzKUziP/+939/y5pvjpydla4/DtLQGJYhKYXjTmt+48xM3nq6UpRDGWpekK2SkFXZRZ4uGDQ9iGEcDlyy67447pioV0dqaYWsLlIhK6/vuvEsgnU3fLVh7xmCwzjOjkGKtN65b35PPJ611K9RCMDBJkkt7e9etvT5WShAfmZmtZ6nG0VWDg1cPrmrx8nVL4YjieNXSZUsuvTRKYjYVs5c2xiVx3dBQrFQra8othANAGbN00SJPOsZaHvLa4niAgcsXt9potdJyaK2Hr1iB0M3lzya9OgswtHy5I6Xp1mwFALrlmvc2qPXmlqNCFsPBYjhYDAeL4WAxHCyGg8VwsLpFfDSh8Wr4BljTppZRDEeDmSBElwQhQeO2smljBCIhtrhxNsPRsMntCeGQqKjkaLk0lUSE2JDZjgiJNovyhapScRgmRMJxLNR5URDD0WKDAQCQdZxDpdPbThx/Z3L8RFiJtG7gDLcWXCGkNnf81v2Hd+4+tnefkJKktE0+r8BwzNWVCCSB+PShfT8/ejBUiUtCEvlSNnCDNCIYa5Wk1TesHVx77cG3dr76zKaoEjqea5u5kMlwzMlmCKSqVv/+7s4d4ycy0sk7bnq8tbHxY/rH0EJUqQDgymuv7luy+KWfPHXy6Kjje82zH5zKzmnUHKInR/a8cXKs4HgA0OwWiEiEhNVyuXBJ/61f3ujnszpJuM4xHyPQjHQ2jx5+9cRoj+sr27rjiiREVKkULum/6fOfk77XvPsGGY46HYokGq9WNx054AtpZkFGeulT2uR67o6AhIjD6tKhVcuGh9zA97MZRGw4IgxHfUGA9YTYNfHeRBzKjxyJPu/PO57nBoF0Hcfz3EwADYhLLCEuWbUSANxMEBQLXiaYRqRBlHBAWmf6YC3snjg5y3N5juuO7h05uOPt8uRp1/eWDq9evuZjQgqt6m+GhkRa674li90g0EohohsE0vNUFKs40krDnA+JMRz1+BRCnEriI6WSQzMffhdSvvL0/7yz9RVARCRr7YEdb49sf/PTD37J8T2jdN2d/7XWQS6X7+sdHz0uHSc9G+YGvuN7OkmSKNZJkn68+ihht1LXrAVU1sRG48zexN3+3PO7XnrZzWTcIHA81w28IJc9PrL/F0/81GgzpzshrCWiFIv3/6cAIF03yOeCYsHLZIQjp4OeGt0Nw1E3HzN5FAvCcU4dH3v3ldeCbNZaMx2QGmu08XO50ZH9h3budnxvjoWs8w55igIJ4QZ+UCiklEjHSYOSWYLCcDQvaDXSkaP79idRBEQfKphaY4QQR995F4xtYj+BFIJzlOSDQiHI51zfF/KcObkQKxxzNFdxGF6wjo4YVyPbmn5OZwYfCaVwpeumGbXR2mhtjDHaWK0/RAnD0dwRyfYUzx8MIlpjssUCCgFx3MrbqM4OPxJJIc5G2eldh9NmRGlAhqOJ6S6pOFm6epVfyKlqRFKciy1wepBWXLXGtvWesg94E0SScvqjuBxzzC2hnSGmQzBaB4X82jvXqyTRiUai9AsshFNTwzffePngyuR8zTZrpLCRmwPeL7Yc9eQpFqxPIue65UoiLjw2iJhE0aobrgOA1597PpwqWbAA4HjeVetuW3vXen2mzWbdWGilokqzbudgOOqqPhmble6KfPFIacq9aBNIRIzCcHDtNYtXrTz6zt7yxKQbBIsHV/ZeviiJYphbM00SYmp8vDQxIZrTK4zhqNut2I/39L90/MiMm3oQMa5GbhAM3Xg9IIIFrVRcjRDn1BTPGiM878Tho0kUuUHQjKyH4ajTnle1Gu7pX5rNH6+UPSEu3h8BCa3WUUWd+/05OwIkSuL4yJ53RdNaDHJAWmfYYaz1hdi4YjWAhdnUsdK94+nXnMkwWjuet++11yd+PSYcBxiOeSVCDJW6qu/SzwxceSquImKLunVZa7TJFPK/PnBwz6+2OV4TtwmyW5kTH2WV3LX0CgB49vB+APCEgCY0tbLTl0hYYwxJ6Wfckdff2vniFiFlM/b4MBwN8y/K2nuWr1qRKz518N2j5SlrwSFquBUx1gBhJpMpT55+fdP/7tn6qnAcL5ORrkPNIZLhaAwfpST+eG//ykJxz8T4rlMnD5YmS0ncwENN2ti855ly5dmfPDU2cqA0MekFvrU2qlTiEIXjOL43bUWgkYedGI6GxR+EeF3/ZWsvuaycJFXdyIahSpv+fP6Xr2175KWXe3t6vMx04poGtiqOdRyTENJzpeuiEJiulcyZEoajYXwAQEUlACAQc47bwD+uyThICsDLZFAI88Em1ykiRuuoEsZhlaSQjitch4TA6RDWMhzzBRHb6LaQ6XGYNCK9oD04kx/rROlEYYjTlDiShMAzH6wmc8JwNCsQaddfO1tEmaYEkQSRkMKRJCUhIeHZJOjirDAc3QvoGUqM0lrpdPkXiYQUJAQJgUREBET44UqKZTgWHiYA1pgk0me/jYg4fV36me0EAHRmB5Bs3+dktefVvf/vWGtNkujkA/4Lz9za0Wo4EqW4+Xndr641zJ11K61bW7HWSiHeHhmxC/Ui6rm8OgLYvX8kTpLuvG/FAkgpj713olwNia9pqjFbsQAHR49Tt97xZozxXHfv4cMHRkc9x+X7eGqoNwhRjqrbdu9q8dXlLSXREeJ0ufyzX77oCtGu+9k7TtoY3/Ve3vHW7oMHMp7XtZfxGGN8z/uvzf9XiqpnT0ywZo7ViH76/M+jOKYuvjrUWJvx/bf3jzz2zM/yftDi+5U71Gzkg8wru3c9tXlzMZdT3Xp16FnjkfWDv//hD/YcOZT1fc3O5eJJCmKs1Nf/+TthFLX+slVq/QM7Uk6WSw9/6xFrQRJx8HGh5E5pXQgyf/Po97fu2FHIZls/kURxeHXr+Qg8751Dh96bOHXvbb+prVVKcXL7If9rre3N5h59+r//7gePFttBRnvgmA4+gmDLm28cOTG2/oZP5LPZMF0WWvDFMQugtfZdN+N5333yP77+3e9kfL9dh2nbA0dqP3JBZuuOHS9s33bV4ODgkqUGIVHKWjtd4V9IoKRnU7UxjhCFIHP85MmHv/2tf3r8x4VcrqlbiC8uHNi4oY0vRQoxVal4jvO1+x/8yuc2LF90GQJUVaK1Xji5jBBCkPAchwDeOz35zJaX/uHffnjo+PG+QqG9L6HNcACAINLGnC6XL+3tvfvmT9598yfXXDnYVyj05PNt7U7QsnyEpsLKxNTUviOHN29/7anNL+w/dsx33cDz2j492g8HACAACZEkSSkMCbGvWOwvFlcsXmyM7W7XYgEE0dip8WMn3js1dTqK44zv+67brtt35iMccCbISJccE62U0rFKELo/7LBgpZCOlI4QSJT21pknn20e7QSz1mprAUCQEK4IPG8BRaPpnuR5FmbJ+fmyAEDzsm27xaUnFsPBYjhYDAeL4WAxHCyGg8VwsBgOFsPBYjhYLIaDxXCwGA4Ww8FiOFgMB4vhYDEcLIaDxXCwWAwHi+FgMRwshoPFcLAYDhbDwWI4WAwHi+FgsRgOFsPBYjhYDAeL4WAxHCyGg8VwsBgOFsPBYjhYLIaDxXCwGA4Ww8Fqj/4fqJblSmlnSIYAAAAASUVORK5CYII=">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF1F4;--surface:#FFFFFF;--surface-2:#F4F6F8;--ink:#17202A;--muted:#6A7482;--line:#E3E7EC;
+  --accent:#1F5F5B;--accent-ink:#FFFFFF;--accent-soft:#E0EEEC;--danger:#B4442E;--good:#2E7D52;
+  --hero:#1D4E4A;--hero-ink:#F2F7F6;--hero-muted:rgba(242,247,246,.68);--hero-track:rgba(255,255,255,.16);
+  --shadow:0 1px 2px rgba(23,32,42,.05),0 6px 20px rgba(23,32,42,.06);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1419;--surface:#182029;--surface-2:#1F2832;--ink:#E8ECF1;--muted:#8E98A6;--line:#27313C;
+  --accent:#6FC2B8;--accent-ink:#0D1918;--accent-soft:#1B3431;--danger:#E58A74;--good:#7FCB9C;
+  --hero:#1C3B39;--hero-ink:#EAF4F2;--hero-muted:rgba(234,244,242,.62);--hero-track:rgba(255,255,255,.12);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.22);color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --bg:#0F1419;--surface:#182029;--surface-2:#1F2832;--ink:#E8ECF1;--muted:#8E98A6;--line:#27313C;
+  --accent:#6FC2B8;--accent-ink:#0D1918;--accent-soft:#1B3431;--danger:#E58A74;--good:#7FCB9C;
+  --hero:#1C3B39;--hero-ink:#EAF4F2;--hero-muted:rgba(234,244,242,.62);--hero-track:rgba(255,255,255,.12);
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.22);color-scheme:dark;}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Onest",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.45;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums;-webkit-tap-highlight-color:transparent}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer;border:0;background:none;padding:0;touch-action:manipulation;-webkit-user-select:none;user-select:none}
+#panel,body{cursor:pointer}
+.chip{-webkit-touch-callout:none}
+.chip.hold{transform:scale(.94);box-shadow:0 0 0 2px var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+.wrap{max-width:520px;margin:0 auto;padding:10px 16px 130px}
+
+.top{display:flex;align-items:center;justify-content:space-between;padding:4px 0 12px}
+.month{display:flex;align-items:center;gap:2px}
+.month h1{font-size:17px;font-weight:600;margin:0;min-width:124px;text-align:center;text-transform:capitalize}
+.iconbtn{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;color:var(--muted)}
+.iconbtn:hover{background:var(--surface)}
+.iconbtn svg{width:20px;height:20px}
+.pill{font-size:13px;font-weight:500;color:var(--accent);background:var(--accent-soft);padding:7px 12px;border-radius:999px}
+.pill[hidden]{display:none}
+
+/* hero */
+.hero{background:var(--hero);color:var(--hero-ink);border-radius:26px;padding:22px 20px 18px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-70px;width:220px;height:220px;border-radius:50%;border:34px solid rgba(255,255,255,.05)}
+.hero .lbl{font-size:14px;color:var(--hero-muted)}
+.big{font-size:46px;font-weight:800;letter-spacing:-.03em;line-height:1.05;margin:6px 0 16px}
+.big .cur{font-size:26px;font-weight:600;color:var(--hero-muted);margin-left:5px}
+.big.neg{color:#FFB4A2}
+.track{height:8px;border-radius:6px;background:var(--hero-track);overflow:hidden;display:flex;gap:2px}
+.track span{display:block;height:100%}
+.cap{font-size:13px;color:var(--hero-muted);margin-top:8px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1)}
+.kpi small{display:block;color:var(--hero-muted);font-size:12.5px}
+.kpi b{font-weight:600;font-size:15.5px}
+
+/* quick */
+.sect{display:flex;justify-content:space-between;align-items:baseline;margin:24px 4px 10px}
+.sect h2{font-size:15px;font-weight:600;margin:0}
+.link{color:var(--accent);font-size:14px;font-weight:500}
+.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.chip{background:var(--surface);border-radius:18px;padding:12px;text-align:left;box-shadow:var(--shadow);display:flex;flex-direction:column;position:relative;transition:transform .08s}
+.chip:active{transform:scale(.96)}
+.chip .e{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;font-size:19px;background:var(--surface-2)}
+.chip .n{font-weight:600;font-size:14.5px;margin-top:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.chip .a{color:var(--muted);font-size:13px}
+.chip{cursor:pointer;user-select:none;-webkit-user-select:none;touch-action:manipulation}
+.chip .pm{position:absolute;right:8px;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;font-size:20px;font-weight:600;line-height:1}
+.chip .pl{top:8px;background:var(--accent);color:var(--accent-ink)}
+.chip .mn{bottom:8px;background:var(--surface-2);color:var(--ink)}
+.chip .mn:disabled{opacity:.3;cursor:default}
+.chip .cnt{color:var(--accent);font-size:12.5px;font-weight:600;margin-top:2px;min-height:18px}
+.chip .n,.chip .a,.chip .cnt{padding-right:36px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hint{font-size:12.5px;color:var(--muted);margin:8px 4px 0}
+
+/* lists */
+.group{margin-top:14px}
+.group h3{font-size:13px;font-weight:500;color:var(--muted);margin:0 6px 6px;display:flex;justify-content:space-between}
+.list{background:var(--surface);border-radius:20px;box-shadow:var(--shadow);overflow:hidden}
+.item{display:flex;align-items:center;gap:12px;padding:12px 14px;width:100%;text-align:left}
+.item+.item{border-top:1px solid var(--line)}
+.dot{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;font-size:18px;flex:none}
+.item .mid{flex:1;min-width:0;text-align:left}
+.item .t{font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.item .s{font-size:13px;color:var(--muted)}
+.item .amt{font-weight:600;white-space:nowrap}
+.amt.in{color:var(--good)}
+.check{width:28px;height:28px;border-radius:50%;border:2px solid var(--line);flex:none;display:grid;place-items:center}
+.check.on{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.check svg{width:14px;height:14px}
+.item.paid .t,.item.paid .amt{color:var(--muted);text-decoration:line-through}
+.empty{background:var(--surface);border-radius:20px;padding:26px 20px;text-align:center;color:var(--muted);box-shadow:var(--shadow);font-size:14.5px}
+.empty b{display:block;color:var(--ink);font-weight:600;margin-bottom:4px;font-size:16px}
+.addrow{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:10px;padding:13px;border-radius:16px;border:1.5px dashed var(--line);color:var(--accent);font-weight:500}
+
+/* distribution */
+.cat{padding:14px}
+.cat+.cat{border-top:1px solid var(--line)}
+.cat .head{display:flex;align-items:center;gap:10px;width:100%;text-align:left}
+.cat .sw{width:10px;height:10px;border-radius:3px;flex:none}
+.cat .name{flex:1;font-weight:500}
+.cat .pct{color:var(--muted);font-size:13px;width:42px;text-align:right}
+.bar{height:6px;border-radius:4px;background:var(--surface-2);margin:8px 0 0 20px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:4px}
+.cat .cmp{font-size:12.5px;color:var(--muted);margin:6px 0 0 20px}
+.up{color:var(--danger)}.down{color:var(--good)}
+.sub{margin:10px 0 0 20px;border-left:2px solid var(--line);padding-left:12px}
+.sub div{display:flex;justify-content:space-between;font-size:14px;padding:3px 0}
+.sub span:first-child{color:var(--muted)}
+
+/* bottom nav */
+.nav{position:fixed;left:0;right:0;bottom:0;z-index:10;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 8px calc(6px + env(safe-area-inset-bottom,0px))}
+.nav .in{max-width:520px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 76px 1fr 1fr;align-items:center}
+.nav button.t{display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;font-size:11.5px;font-weight:500;color:var(--muted)}
+.nav button.t svg{width:22px;height:22px}
+.nav button.t[aria-current="page"]{color:var(--accent)}
+.plus{justify-self:center;width:58px;height:58px;border-radius:20px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;margin-top:-26px;box-shadow:0 10px 24px rgba(31,95,91,.35)}
+.plus svg{width:26px;height:26px}
+
+/* sheet */
+.backdrop{position:fixed;inset:0;background:rgba(10,14,20,.45);display:flex;align-items:flex-end;justify-content:center;z-index:20;opacity:0;transition:opacity .18s}
+.backdrop.show{opacity:1}
+.sheet{background:var(--surface);width:100%;max-width:520px;border-radius:26px 26px 0 0;padding:10px 20px calc(20px + env(safe-area-inset-bottom,0px));max-height:90%;overflow-y:auto;transform:translateY(30px);transition:transform .22s cubic-bezier(.2,.8,.2,1)}
+.backdrop.show .sheet{transform:none}
+.grab{width:40px;height:4px;border-radius:2px;background:var(--line);margin:0 auto 14px}
+.sheet h2{font-size:18px;margin:0 0 14px;font-weight:600}
+.seg{display:grid;grid-template-columns:1fr 1fr;background:var(--surface-2);border-radius:14px;padding:4px;margin-bottom:14px}
+.seg button{padding:9px;border-radius:10px;font-weight:500;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:var(--shadow)}
+.seg button[aria-pressed="true"][data-k="in"]{color:var(--good)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+.inp{width:100%;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:16px}
+.inp:focus{outline:none;border-color:var(--accent)}
+.amount{display:flex;align-items:baseline;gap:6px;background:var(--surface-2);border:1px solid var(--line);border-radius:18px;padding:12px 16px}
+.amount:focus-within{border-color:var(--accent)}
+.amount input{flex:1;min-width:0;border:0;background:none;font-size:38px;font-weight:800;letter-spacing:-.02em;padding:0;outline:none}
+.amount span{font-size:24px;color:var(--muted);font-weight:600}
+.steps{display:flex;gap:6px;margin-top:8px}
+.steps button{flex:1;padding:8px 0;border-radius:10px;background:var(--surface-2);border:1px solid var(--line);font-size:14px;font-weight:500}
+.cats{display:flex;flex-wrap:wrap;gap:6px}
+.cats button{padding:7px 12px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);font-size:14px}
+.cats button[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.toggle{display:flex;align-items:center;justify-content:space-between;background:var(--surface-2);border:1px solid var(--line);border-radius:12px;padding:12px 14px;margin-bottom:14px;width:100%;text-align:left}
+.sw2{width:44px;height:26px;border-radius:999px;background:var(--line);position:relative;flex:none;transition:background .15s}
+.sw2::after{content:"";position:absolute;top:3px;left:3px;width:20px;height:20px;border-radius:50%;background:#fff;transition:transform .15s;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.toggle[aria-checked="true"] .sw2{background:var(--accent)}
+.toggle[aria-checked="true"] .sw2::after{transform:translateX(18px)}
+.actions{display:flex;gap:10px;margin-top:6px}
+.btn{flex:1;padding:15px;border-radius:15px;font-weight:600;background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{background:var(--surface-2);color:var(--ink);flex:0 0 auto;padding:15px 18px}
+.btn.del{background:none;color:var(--danger);flex:0 0 auto;padding:15px 10px}
+.plist .item{padding:10px 4px}
+
+.toast{position:fixed;left:50%;bottom:calc(92px + env(safe-area-inset-bottom,0px));transform:translate(-50%,12px);background:var(--ink);color:var(--bg);padding:8px 8px 8px 16px;border-radius:14px;font-size:14px;opacity:0;transition:.2s;pointer-events:none;z-index:30;display:flex;align-items:center;gap:4px;max-width:calc(100% - 32px);white-space:nowrap}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast span{overflow:hidden;text-overflow:ellipsis;padding-right:6px}
+.toast button{color:var(--bg);font-weight:600;padding:6px 10px;border-radius:9px;opacity:.9}
+.toast button:hover{background:rgba(127,127,127,.25)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:360px){.big{font-size:38px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="month">
+      <button class="iconbtn" id="prev" aria-label="Önceki ay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <h1 id="mtitle"></h1>
+      <button class="iconbtn" id="next" aria-label="Sonraki ay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+    </div>
+    <button class="pill" id="today" hidden>Bu aya dön</button>
+  </header>
+
+  <section class="hero" aria-live="polite">
+    <div class="lbl" id="slabel"></div>
+    <div class="big" id="stotal"></div>
+    <div class="track" id="strack" aria-hidden="true"></div>
+    <div class="cap" id="scap"></div>
+    <div class="kpis">
+      <div class="kpi"><small>Gelir</small><b id="kin"></b></div>
+      <div class="kpi"><small>Gider</small><b id="kout"></b></div>
+      <div class="kpi"><small>Ödenecek</small><b id="krem"></b></div>
+    </div>
+  </section>
+
+  <main id="panel"></main>
+</div>
+
+<nav class="nav" aria-label="Bölümler"><div class="in">
+  <button class="t" data-tab="exp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>Hareketler</button>
+  <button class="t" data-tab="fixed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg>Sabit</button>
+  <button class="plus" id="plus" aria-label="Ekle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></button>
+  <button class="t" data-tab="income"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>Gelir</button>
+  <button class="t" data-tab="dist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9h-9z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15z"/></svg>Dağılım</button>
+</div></nav>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const CATS=[
+  {id:'yeme',name:'Yeme-içme',color:'#D08C3C',e:'🍽️'},
+  {id:'market',name:'Market',color:'#5E9C5A',e:'🛒'},
+  {id:'ulasim',name:'Ulaşım',color:'#4A7FB5',e:'🚌'},
+  {id:'kira',name:'Kira',color:'#7A5AA6',e:'🏠'},
+  {id:'ev',name:'Ev giderleri',color:'#3F8F8A',e:'💡'},
+  {id:'abonelik',name:'Abonelikler',color:'#B85C8A',e:'🔁'},
+  {id:'online',name:'Online alışveriş',color:'#C0643F',e:'📦'},
+  {id:'eglence',name:'Eğlence',color:'#9A8F2E',e:'🎟️'},
+  {id:'saglik',name:'Sağlık & bakım',color:'#C24A5E',e:'💊'},
+  {id:'diger',name:'Diğer',color:'#7C8591',e:'•'}
+];
+const CAT=Object.fromEntries(CATS.map(c=>[c.id,c]));
+const DEFAULT_SETTINGS={v:3,presets:[
+  {id:'p1',e:'☕',name:'Kahve',amount:200,cat:'yeme'},
+  {id:'p2',e:'🍽️',name:'Yemek',amount:450,cat:'yeme'},
+  {id:'p3',e:'🛒',name:'Market',amount:750,cat:'market'},
+  {id:'p4',e:'🚌',name:'Yol',amount:45,cat:'ulasim'},
+  {id:'p5',e:'🚕',name:'Taksi',amount:300,cat:'ulasim'},
+  {id:'p6',e:'📦',name:'Online',amount:500,cat:'online'},
+  {id:'p7',e:'🥐',name:'Atıştırmalık',amount:120,cat:'yeme'},
+  {id:'p8',e:'🎬',name:'Eğlence',amount:500,cat:'eglence'},
+  {id:'p9',e:'💊',name:'Eczane',amount:250,cat:'saglik'}
+],fixed:[],incomeFixed:[]};
+
+/* ---------- storage ---------- */
+let DB=null,UID=null;
+const LS='cuzdan:';
+function lsGet(k){try{const v=localStorage.getItem(LS+k);return v?JSON.parse(v):null}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem(LS+k,JSON.stringify(v))}catch(e){}}
+function ref(id){return DB.collection('data/users/'+UID).doc(id)}
+async function loadDoc(id){
+  if(DB){try{const s=await ref(id).get();return s.exists?s.data():null}catch(e){console.warn(e)}}
+  return lsGet(id);
+}
+const pend={},busy={},tm={};
+function save(id,data){lsSet(id,data);if(!DB)return;pend[id]=data;clearTimeout(tm[id]);tm[id]=setTimeout(()=>flush(id),350)}
+async function flush(id){
+  if(busy[id]||!pend[id])return;
+  const d=JSON.parse(JSON.stringify(pend[id]));delete pend[id];busy[id]=true;
+  try{await ref(id).set(d)}catch(e){console.warn('kaydedilemedi',e);if(e&&e.code==='invalid_argument'){DB=null}}
+  busy[id]=false;if(pend[id])flush(id);
+}
+function normSettings(s){
+  s=s||JSON.parse(JSON.stringify(DEFAULT_SETTINGS));s.presets=s.presets||[];s.fixed=s.fixed||[];s.incomeFixed=s.incomeFixed||[];
+  if((s.v||1)<3){DEFAULT_SETTINGS.presets.forEach(d=>{if(!s.presets.some(p=>p.id===d.id||p.name===d.name))s.presets.push({...d})})}
+  s.v=3;return s}
+function normMonth(d){d=d||{};return{expenses:d.expenses||[],paid:d.paid||{},incomes:d.incomes||[]}}
+
+/* ---------- state ---------- */
+let settings=normSettings(lsGet('settings'));
+const months={};
+let cur=keyOf(new Date());
+let tab='exp',openCat=null;
+
+function keyOf(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')}
+function shiftKey(k,n){const[y,m]=k.split('-').map(Number);return keyOf(new Date(y,m-1+n,1))}
+function monthLabel(k){const[y,m]=k.split('-').map(Number);return new Date(y,m-1,1).toLocaleDateString('tr-TR',{month:'long',year:'numeric'})}
+function monthName(k){const[y,m]=k.split('-').map(Number);return new Date(y,m-1,1).toLocaleDateString('tr-TR',{month:'long'})}
+function todayStr(){const d=new Date();return keyOf(d)+'-'+String(d.getDate()).padStart(2,'0')}
+function defDate(){return cur===keyOf(new Date())?todayStr():cur+'-01'}
+function mdoc(k){return months[k]||(months[k]=normMonth(lsGet('m-'+k)))}
+async function ensureMonth(k){const d=await loadDoc('m-'+k);if(d)months[k]=normMonth(d);return mdoc(k)}
+function saveMonth(k){save('m-'+k,months[k])}
+function saveSettings(){save('settings',settings)}
+const uid=()=>Math.random().toString(36).slice(2,10)+Date.now().toString(36).slice(-4);
+const isThisMonth=()=>cur===keyOf(new Date());
+
+/* ---------- format ---------- */
+const nf=new Intl.NumberFormat('tr-TR',{maximumFractionDigits:2});
+const money=n=>nf.format(Math.round(n*100)/100)+' ₺';
+function parseAmt(s){let t=String(s).trim().replace(/\s|₺/g,'');if(t.includes(','))t=t.replace(/\./g,'').replace(',','.');else if(/^\d{1,3}(\.\d{3})+$/.test(t))t=t.replace(/\./g,'');const n=parseFloat(t);return isFinite(n)?n:NaN}
+const fmtIn=v=>v===''||v==null?'':String(v).replace('.',',');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function dayLabel(ds){
+  const t=todayStr();const y=new Date();y.setDate(y.getDate()-1);
+  const ys=keyOf(y)+'-'+String(y.getDate()).padStart(2,'0');
+  if(ds===t)return 'Bugün';if(ds===ys)return 'Dün';
+  const[a,b,c]=ds.split('-').map(Number);
+  return new Date(a,b-1,c).toLocaleDateString('tr-TR',{day:'numeric',month:'long',weekday:'long'});
+}
+function tint(hex,a){const n=parseInt(hex.slice(1),16);return `rgba(${n>>16},${(n>>8)&255},${n&255},${a})`}
+
+/* ---------- computations ---------- */
+function calc(k){
+  const m=mdoc(k);
+  const fixedTotal=settings.fixed.reduce((s,f)=>s+f.amount,0);
+  const paid=settings.fixed.filter(f=>m.paid[f.id]).reduce((s,f)=>s+f.amount,0);
+  const expTotal=m.expenses.reduce((s,e)=>s+e.amount,0);
+  const income=settings.incomeFixed.reduce((s,i)=>s+i.amount,0)+m.incomes.reduce((s,i)=>s+i.amount,0);
+  const byCat={};
+  settings.fixed.forEach(f=>{byCat[f.cat]=(byCat[f.cat]||0)+f.amount});
+  m.expenses.forEach(e=>{byCat[e.cat]=(byCat[e.cat]||0)+e.amount});
+  const spent=fixedTotal+expTotal;
+  return{fixedTotal,paid,expTotal,spent,income,net:income-spent,remaining:fixedTotal-paid,byCat};
+}
+
+/* ---------- render ---------- */
+const $=s=>document.querySelector(s);
+const ico=(e,color)=>`<span class="dot" style="background:${tint(color,.15)}">${esc(e)}</span>`;
+function render(){
+  $('#mtitle').textContent=monthLabel(cur);
+  $('#today').hidden=isThisMonth();
+  const c=calc(cur);
+  const cats=CATS.filter(x=>c.byCat[x.id]>0).sort((a,b)=>c.byCat[b.id]-c.byCat[a.id]);
+  const big=$('#stotal');
+  if(c.income>0){
+    $('#slabel').textContent=isThisMonth()?'Bu ay elinde kalan':monthName(cur)+' ayında kalan';
+    big.innerHTML=esc(nf.format(Math.round(c.net)))+'<span class="cur">₺</span>';
+    big.classList.toggle('neg',c.net<0);
+    const pct=Math.round(c.spent/c.income*100);
+    const scale=Math.max(c.income,c.spent);
+    $('#strack').innerHTML=cats.map(x=>`<span style="width:${c.byCat[x.id]/scale*100}%;background:${x.color}"></span>`).join('');
+    $('#scap').textContent=c.net<0?`Gelirini ${money(-c.net)} aştın`:`Gelirinin %${pct}'ini harcadın`;
+  }else{
+    $('#slabel').textContent=isThisMonth()?'Bu ay toplam gider':monthName(cur)+' toplam gider';
+    big.innerHTML=esc(nf.format(Math.round(c.spent)))+'<span class="cur">₺</span>';
+    big.classList.remove('neg');
+    $('#strack').innerHTML=c.spent?cats.map(x=>`<span style="flex:${c.byCat[x.id]};background:${x.color}"></span>`).join(''):'';
+    $('#scap').textContent='Gelir ekleyince kalan tutar burada görünür.';
+  }
+  $('#kin').textContent=money(c.income);
+  $('#kout').textContent=money(c.spent);
+  $('#krem').textContent=money(c.remaining);
+  document.querySelectorAll('.nav button.t').forEach(b=>b.toggleAttribute('aria-current',false)||(b.dataset.tab===tab&&b.setAttribute('aria-current','page')));
+  ({exp:renderExp,fixed:renderFixed,income:renderIncome,dist:renderDist})[tab]();
+  bindPanel();
+}
+
+function renderExp(){
+  const m=mdoc(cur);
+  const counts={};m.expenses.forEach(e=>{counts[e.name]=(counts[e.name]||0)+1});
+  const chips=settings.presets.map(p=>{const n=counts[p.name]||0;return `<div class="chip" data-preset="${p.id}" role="group" aria-label="${esc(p.name)}">
+  <button class="pm pl" aria-label="${esc(p.name)} ekle, ${money(p.amount)}">+</button>
+  <button class="pm mn" data-minus="${p.id}" aria-label="Son ${esc(p.name)} kaydını sil" ${n?'':'disabled'}>−</button>
+  <span class="e">${esc(p.e||'•')}</span><span class="n">${esc(p.name)}</span><span class="a">${money(p.amount)}</span><span class="cnt">${n?n+' kez':''}</span></div>`}).join('');
+  const rows=[...m.expenses.map(e=>({...e,kind:'out'})),...m.incomes.map(i=>({...i,kind:'in'}))];
+  const byDay={};rows.forEach(r=>{(byDay[r.date]=byDay[r.date]||[]).push(r)});
+  const days=Object.keys(byDay).sort().reverse();
+  const list=days.length?days.map(d=>{
+    const items=byDay[d].sort((a,b)=>(b.created||0)-(a.created||0));
+    const out=items.filter(i=>i.kind==='out').reduce((s,e)=>s+e.amount,0);
+    return `<div class="group"><h3><span>${esc(dayLabel(d))}</span><span>${out?'−'+money(out):''}</span></h3><div class="list">${items.map(r=>{
+      if(r.kind==='in')return `<button class="item" data-inc="${r.id}">${ico('💰','#2E7D52')}<span class="mid"><div class="t">${esc(r.name)}</div><div class="s">Gelir</div></span><span class="amt in">+${money(r.amount)}</span></button>`;
+      const ct=CAT[r.cat]||CAT.diger;
+      return `<button class="item" data-exp="${r.id}">${ico(r.e||ct.e,ct.color)}<span class="mid"><div class="t">${esc(r.name)}</div><div class="s">${esc(ct.name)}</div></span><span class="amt">−${money(r.amount)}</span></button>`}).join('')}</div></div>`}).join('')
+  :`<div class="empty"><b>Bu ay henüz hareket yok</b>Hızlı butonlardan birine dokun ya da alttaki + ile ekle.</div>`;
+  $('#panel').innerHTML=`<div class="sect"><h2>Hızlı ekle</h2><button class="link" id="editPresets">Düzenle</button></div>
+  <div class="quick">${chips}</div><p class="hint">+ ile ekle, − ile son eklediğini sil. Basılı tutarsan tutarı değiştirip ekleyebilirsin.</p>
+  <div class="sect"><h2>Hareketler</h2></div>${list}`;
+}
+
+function renderFixed(){
+  const m=mdoc(cur);const c=calc(cur);
+  const fx=[...settings.fixed].sort((a,b)=>(a.day||99)-(b.day||99));
+  const rows=fx.length?`<div class="list">${fx.map(f=>{
+    const on=!!m.paid[f.id];const ct=CAT[f.cat]||CAT.diger;
+    return `<div class="item ${on?'paid':''}"><button class="check ${on?'on':''}" data-paid="${f.id}" aria-label="${esc(f.name)}: ${on?'ödenmedi yap':'ödendi yap'}">${on?'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M5 12l5 5 9-10"/></svg>':''}</button>
+    <button class="mid" data-fixed="${f.id}"><div class="t">${esc(f.name)}</div><div class="s">${esc(ct.name)}${f.day?', ayın '+f.day+'. günü':''}</div></button><span class="amt">${money(f.amount)}</span></div>`}).join('')}</div>`
+  :`<div class="empty"><b>Sabit ödeme yok</b>Kira, faturalar, abonelikler gibi her ay tekrar edenleri ekle. Her ay otomatik sayılır.</div>`;
+  $('#panel').innerHTML=`<div class="sect"><h2>Her ay ${money(c.fixedTotal)}</h2><span class="muted" style="font-size:14px">${money(c.paid)} ödendi</span></div>${rows}
+  <button class="addrow" id="addFixed">+ Sabit ödeme ekle</button>`;
+}
+
+function renderIncome(){
+  const m=mdoc(cur);const c=calc(cur);
+  const rec=settings.incomeFixed.length?`<div class="list">${settings.incomeFixed.map(i=>`<button class="item" data-incf="${i.id}">${ico('🔁','#2E7D52')}<span class="mid"><div class="t">${esc(i.name)}</div><div class="s">Her ay</div></span><span class="amt in">+${money(i.amount)}</span></button>`).join('')}</div>`
+  :`<div class="empty"><b>Düzenli gelir yok</b>Maaş gibi her ay gelen tutarı ekle, her aya otomatik yazılsın.</div>`;
+  const extra=m.incomes.length?`<div class="list">${[...m.incomes].sort((a,b)=>b.date.localeCompare(a.date)).map(i=>`<button class="item" data-inc="${i.id}">${ico('💰','#2E7D52')}<span class="mid"><div class="t">${esc(i.name)}</div><div class="s">${esc(dayLabel(i.date))}</div></span><span class="amt in">+${money(i.amount)}</span></button>`).join('')}</div>`
+  :`<div class="empty">Bu ay ek gelir yok.</div>`;
+  $('#panel').innerHTML=`<div class="sect"><h2>Bu ay toplam ${money(c.income)}</h2></div>
+  <div class="sect" style="margin-top:4px"><h2 class="muted" style="font-weight:500;font-size:14px">Düzenli gelirler</h2></div>${rec}
+  <div class="sect"><h2 class="muted" style="font-weight:500;font-size:14px">Bu aya özel</h2></div>${extra}
+  <button class="addrow" id="addIncome">+ Gelir ekle</button>`;
+}
+
+function renderDist(){
+  const c=calc(cur);const m=mdoc(cur);
+  const prevK=shiftKey(cur,-1);const pc=months[prevK]?calc(prevK):null;
+  const cats=CATS.filter(x=>c.byCat[x.id]>0).sort((a,b)=>c.byCat[b.id]-c.byCat[a.id]);
+  if(!cats.length){$('#panel').innerHTML=`<div class="sect"><h2>Dağılım</h2></div><div class="empty"><b>Henüz veri yok</b>Harcama ya da sabit ödeme ekledikçe burada görünür.</div>`;return}
+  const max=c.byCat[cats[0].id];
+  const catHtml=cats.map(x=>{
+    const v=c.byCat[x.id];const pct=Math.round(v/c.spent*100);
+    let cmp='';
+    if(pc&&pc.spent){const p=pc.byCat[x.id]||0;const d=v-p;
+      cmp=p?`<div class="cmp">Geçen ay ${money(p)}, <span class="${d>0?'up':'down'}">${d>0?'+':'−'}${money(Math.abs(d))}</span></div>`:`<div class="cmp">Geçen ay yoktu</div>`}
+    let sub='';
+    if(openCat===x.id){
+      const agg={};
+      settings.fixed.filter(f=>f.cat===x.id).forEach(f=>{agg[f.name+' (sabit)']={n:1,s:f.amount}});
+      m.expenses.filter(e=>e.cat===x.id).forEach(e=>{const a=agg[e.name]||(agg[e.name]={n:0,s:0});a.n++;a.s+=e.amount});
+      sub=`<div class="sub">${Object.entries(agg).sort((a,b)=>b[1].s-a[1].s).map(([k,a])=>`<div><span>${esc(k)}${a.n>1?', '+a.n+' kez':''}</span><span>${money(a.s)}</span></div>`).join('')}</div>`;
+    }
+    return `<div class="cat"><button class="head" data-cat="${x.id}" aria-expanded="${openCat===x.id}"><span class="sw" style="background:${x.color}"></span><span class="name">${esc(x.name)}</span><b>${money(v)}</b><span class="pct">%${pct}</span></button><div class="bar"><i style="width:${v/max*100}%;background:${x.color}"></i></div>${cmp}${sub}</div>`}).join('');
+  const agg={};
+  m.expenses.forEach(e=>{const a=agg[e.name]||(agg[e.name]={n:0,s:0,cat:e.cat,e:e.e});a.n++;a.s+=e.amount});
+  const top=Object.entries(agg).sort((a,b)=>b[1].s-a[1].s).slice(0,6);
+  const topHtml=top.length?`<div class="sect"><h2>En çok harcadığın kalemler</h2></div><div class="list">${top.map(([k,a])=>{const ct=CAT[a.cat]||CAT.diger;
+    return `<div class="item">${ico(a.e||ct.e,ct.color)}<span class="mid"><div class="t">${esc(k)}</div><div class="s">${a.n} kez, ortalama ${money(a.s/a.n)}</div></span><span class="amt">${money(a.s)}</span></div>`}).join('')}</div>`:'';
+  $('#panel').innerHTML=`<div class="sect"><h2>Kategoriler</h2><span class="muted" style="font-size:13px">Detay için dokun</span></div><div class="list">${catHtml}</div>${topHtml}`;
+}
+
+/* ---------- toast ---------- */
+function toast(msg,actions=[]){
+  const t=$('#toast');
+  t.innerHTML=`<span>${esc(msg)}</span>`+actions.map((a,i)=>`<button data-i="${i}">${esc(a.label)}</button>`).join('');
+  if(!actions.length)t.style.paddingRight='16px';else t.style.paddingRight='';
+  t.onclick=e=>{const b=e.target.closest('button');if(!b)return;t.classList.remove('show');actions[b.dataset.i].fn()};
+  t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove('show'),actions.length?4500:1800);
+}
+
+/* ---------- sheet ---------- */
+let sheetEl=null;
+function openSheet(html,mount){
+  closeSheet(true);
+  const bd=document.createElement('div');bd.className='backdrop';
+  bd.innerHTML=`<div class="sheet" role="dialog" aria-modal="true"><div class="grab"></div>${html}</div>`;
+  bd.addEventListener('click',e=>{if(e.target===bd)closeSheet()});
+  document.body.appendChild(bd);sheetEl=bd;
+  requestAnimationFrame(()=>bd.classList.add('show'));
+  mount&&mount(bd.querySelector('.sheet'));
+}
+function closeSheet(instant){
+  if(!sheetEl)return;const el=sheetEl;sheetEl=null;
+  if(instant){el.remove();return}
+  el.classList.remove('show');setTimeout(()=>el.remove(),220);
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeSheet()});
+const catPicker=sel=>`<div class="cats" id="catp">${CATS.map(c=>`<button type="button" data-c="${c.id}" aria-pressed="${c.id===sel}">${esc(c.name)}</button>`).join('')}</div>`;
+function bindCatPicker(sh,set){
+  const p=sh.querySelector('#catp');if(!p)return;
+  p.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;set(b.dataset.c);
+    p.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b))});
+}
+const amountField=(v,label)=>`<div class="field"><div class="amount"><input id="amt" inputmode="decimal" autocomplete="off" value="${esc(fmtIn(v))}" placeholder="0" aria-label="${label||'Tutar'}"><span>₺</span></div>
+  <div class="steps">${[50,100,250,500].map(n=>`<button type="button" data-step="${n}">+${n}</button>`).join('')}</div></div>`;
+function bindAmount(sh,onEnter){
+  const i=sh.querySelector('#amt');
+  sh.querySelectorAll('[data-step]').forEach(b=>b.onclick=()=>{const v=parseAmt(i.value)||0;i.value=fmtIn(v+Number(b.dataset.step))});
+  i.addEventListener('keydown',e=>{if(e.key==='Enter')onEnter()});
+  setTimeout(()=>{i.focus();i.select()},80);
+  return ()=>parseAmt(i.value);
+}
+
+/* ---------- add / edit ---------- */
+function addExpense(data,k){
+  const m=k===cur?mdoc(cur):mdoc(k);
+  const e={id:uid(),created:Date.now(),...data};m.expenses.push(e);saveMonth(k);return e;
+}
+function removeExpense(id,k){const m=mdoc(k);m.expenses=m.expenses.filter(x=>x.id!==id);saveMonth(k)}
+
+function quickAdd(p){
+  const date=defDate();const k=date.slice(0,7);
+  const e=addExpense({name:p.name,amount:p.amount,cat:p.cat,e:p.e,date},k);
+  render();
+  if(navigator.vibrate)navigator.vibrate(12);
+  toast(`${p.name} eklendi, ${money(p.amount)}`,[
+    {label:'Düzenle',fn:()=>expenseSheet({edit:e})},
+    {label:'Geri al',fn:()=>{removeExpense(e.id,k);render()}}
+  ]);
+}
+
+/* combined + sheet (gider / gelir) */
+function addSheet(kind='out'){
+  let cat='yeme',repeat=false;
+  const body=kind==='out'
+    ?`${amountField('')}
+      <div class="field"><label for="nm">Ne için?</label><input class="inp" id="nm" placeholder="Örn. Kahve, market, yol" maxlength="40"></div>
+      <div class="field"><label>Kategori</label>${catPicker(cat)}</div>
+      <div class="field"><label for="dt">Tarih</label><input class="inp" id="dt" type="date" value="${defDate()}"></div>`
+    :`${amountField('')}
+      <div class="field"><label for="nm">Kaynağı</label><input class="inp" id="nm" placeholder="Örn. Maaş, ek iş, satış" maxlength="40"></div>
+      <button type="button" class="toggle" id="rep" role="switch" aria-checked="false"><span><b style="font-weight:500">Her ay tekrarlansın</b><br><span class="muted" style="font-size:13px">Maaş gibi düzenli gelirler için</span></span><span class="sw2"></span></button>
+      <div class="field" id="dtWrap"><label for="dt">Tarih</label><input class="inp" id="dt" type="date" value="${defDate()}"></div>`;
+  openSheet(`<div class="seg"><button data-k="out" aria-pressed="${kind==='out'}">Gider</button><button data-k="in" aria-pressed="${kind==='in'}">Gelir</button></div>${body}
+    <div class="actions"><button class="btn" id="ok">${kind==='out'?'Gideri ekle':'Geliri ekle'}</button></div>`,sh=>{
+    sh.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{if(b.dataset.k!==kind)addSheet(b.dataset.k)});
+    bindCatPicker(sh,v=>cat=v);
+    const rep=sh.querySelector('#rep');
+    if(rep)rep.onclick=()=>{repeat=!repeat;rep.setAttribute('aria-checked',repeat);sh.querySelector('#dtWrap').hidden=repeat};
+    const submit=()=>{
+      const amount=getAmt();
+      if(!(amount>0)){sh.querySelector('#amt').focus();toast('Tutarı gir');return}
+      const nmv=sh.querySelector('#nm').value.trim();
+      const date=sh.querySelector('#dt').value||defDate();const k=date.slice(0,7);
+      if(kind==='out'){
+        const name=nmv||CAT[cat].name;
+        const doAdd=async()=>{if(k!==cur)await ensureMonth(k);addExpense({name,amount,cat,date},k);closeSheet();render();toast(`${name} eklendi, ${money(amount)}`)};
+        doAdd();
+      }else{
+        const name=nmv||'Gelir';
+        if(repeat){settings.incomeFixed.push({id:uid(),name,amount});saveSettings();closeSheet();render();toast(`${name} her ay eklenecek`)}
+        else{(async()=>{if(k!==cur)await ensureMonth(k);const m=mdoc(k);m.incomes.push({id:uid(),name,amount,date,created:Date.now()});saveMonth(k);closeSheet();render();toast(`${name} eklendi, +${money(amount)}`)})()}
+      }
+    };
+    const getAmt=bindAmount(sh,submit);
+    sh.querySelector('#ok').onclick=submit;
+  });
+}
+
+function expenseSheet({edit}){
+  let cat=edit.cat||'diger';
+  openSheet(`<h2>Gideri düzenle</h2>${amountField(edit.amount)}
+    <div class="field"><label for="nm">Ne için?</label><input class="inp" id="nm" value="${esc(edit.name)}" maxlength="40"></div>
+    <div class="field"><label>Kategori</label>${catPicker(cat)}</div>
+    <div class="field"><label for="dt">Tarih</label><input class="inp" id="dt" type="date" value="${edit.date}"></div>
+    <div class="actions"><button class="btn del" id="del">Sil</button><button class="btn" id="ok">Kaydet</button></div>`,sh=>{
+      bindCatPicker(sh,v=>cat=v);
+      const submit=async()=>{
+        const amount=getAmt();if(!(amount>0)){toast('Tutarı gir');return}
+        const name=sh.querySelector('#nm').value.trim()||CAT[cat].name;
+        const date=sh.querySelector('#dt').value||edit.date;const k=date.slice(0,7);const oldK=edit.date.slice(0,7);
+        removeExpense(edit.id,oldK);
+        if(k!==oldK)await ensureMonth(k);
+        mdoc(k).expenses.push({...edit,amount,name,cat,date});saveMonth(k);
+        closeSheet();render();toast('Kaydedildi');
+      };
+      const getAmt=bindAmount(sh,submit);
+      sh.querySelector('#ok').onclick=submit;
+      sh.querySelector('#del').onclick=()=>{const k=edit.date.slice(0,7);removeExpense(edit.id,k);closeSheet();render();
+        toast('Silindi',[{label:'Geri al',fn:()=>{mdoc(k).expenses.push(edit);saveMonth(k);render()}}])};
+    });
+}
+
+function incomeSheet({edit,fixed}){
+  openSheet(`<h2>${fixed?'Düzenli geliri düzenle':'Geliri düzenle'}</h2>${amountField(edit.amount)}
+    <div class="field"><label for="nm">Kaynağı</label><input class="inp" id="nm" value="${esc(edit.name)}" maxlength="40"></div>
+    ${fixed?'':`<div class="field"><label for="dt">Tarih</label><input class="inp" id="dt" type="date" value="${edit.date}"></div>`}
+    <div class="actions"><button class="btn del" id="del">Sil</button><button class="btn" id="ok">Kaydet</button></div>`,sh=>{
+      const submit=async()=>{
+        const amount=getAmt();if(!(amount>0)){toast('Tutarı gir');return}
+        const name=sh.querySelector('#nm').value.trim()||'Gelir';
+        if(fixed){Object.assign(settings.incomeFixed.find(i=>i.id===edit.id),{name,amount});saveSettings()}
+        else{
+          const date=sh.querySelector('#dt').value||edit.date;const k=date.slice(0,7);const oldK=edit.date.slice(0,7);
+          const om=mdoc(oldK);om.incomes=om.incomes.filter(i=>i.id!==edit.id);saveMonth(oldK);
+          if(k!==oldK)await ensureMonth(k);
+          mdoc(k).incomes.push({...edit,name,amount,date});saveMonth(k);
+        }
+        closeSheet();render();toast('Kaydedildi');
+      };
+      const getAmt=bindAmount(sh,submit);
+      sh.querySelector('#ok').onclick=submit;
+      sh.querySelector('#del').onclick=()=>{
+        if(fixed){settings.incomeFixed=settings.incomeFixed.filter(i=>i.id!==edit.id);saveSettings()}
+        else{const k=edit.date.slice(0,7);const m=mdoc(k);m.incomes=m.incomes.filter(i=>i.id!==edit.id);saveMonth(k)}
+        closeSheet();render();toast('Silindi');
+      };
+    });
+}
+
+function fixedSheet(edit){
+  const src=edit||{name:'',amount:'',cat:'kira',day:''};let cat=src.cat;
+  openSheet(`<h2>${edit?'Sabit ödemeyi düzenle':'Sabit ödeme ekle'}</h2>${amountField(src.amount,'Aylık tutar')}
+    <div class="two"><div class="field"><label for="nm">Adı</label><input class="inp" id="nm" value="${esc(src.name)}" placeholder="Kira, internet…" maxlength="40"></div>
+    <div class="field"><label for="dy">Ödeme günü</label><input class="inp" id="dy" inputmode="numeric" value="${src.day||''}" placeholder="1–31"></div></div>
+    <div class="field"><label>Kategori</label>${catPicker(cat)}</div>
+    <div class="actions">${edit?'<button class="btn del" id="del">Sil</button>':''}<button class="btn" id="ok">${edit?'Kaydet':'Ekle'}</button></div>`,sh=>{
+      bindCatPicker(sh,v=>cat=v);
+      const submit=()=>{
+        const amount=getAmt();const name=sh.querySelector('#nm').value.trim();
+        if(!name){sh.querySelector('#nm').focus();toast('Bir ad yaz');return}
+        if(!(amount>0)){toast('Tutarı gir');return}
+        let day=parseInt(sh.querySelector('#dy').value,10);day=day>=1&&day<=31?day:null;
+        if(edit)Object.assign(settings.fixed.find(f=>f.id===edit.id),{name,amount,cat,day});
+        else settings.fixed.push({id:uid(),name,amount,cat,day});
+        saveSettings();closeSheet();render();toast(edit?'Kaydedildi':name+' eklendi');
+      };
+      const getAmt=bindAmount(sh,submit);
+      if(!edit)setTimeout(()=>sh.querySelector('#nm').focus(),100);
+      sh.querySelector('#ok').onclick=submit;
+      const d=sh.querySelector('#del');
+      if(d)d.onclick=()=>{settings.fixed=settings.fixed.filter(f=>f.id!==edit.id);saveSettings();closeSheet();render();toast('Silindi')};
+    });
+}
+
+function presetsSheet(){
+  const rows=settings.presets.map(p=>`<button class="item" data-p="${p.id}"><span class="dot" style="background:var(--surface-2)">${esc(p.e||'•')}</span><span class="mid"><div class="t">${esc(p.name)}</div><div class="s">${esc((CAT[p.cat]||CAT.diger).name)}</div></span><span class="amt">${money(p.amount)}</span></button>`).join('');
+  openSheet(`<h2>Hızlı butonlar</h2><p class="muted" style="margin:-6px 0 12px;font-size:14px">Dokununca eklenecek varsayılan tutarı buradan ayarla.</p>
+    <div class="plist">${rows}</div>
+    <div class="actions" style="margin-top:14px">${settings.presets.length<12?'<button class="btn ghost" id="addp">Yeni buton</button>':''}<button class="btn" id="done">Tamam</button></div>`,sh=>{
+      sh.querySelector('.plist').addEventListener('click',e=>{const b=e.target.closest('[data-p]');if(b)presetEdit(settings.presets.find(p=>p.id===b.dataset.p))});
+      const a=sh.querySelector('#addp');if(a)a.onclick=()=>presetEdit(null);
+      sh.querySelector('#done').onclick=()=>closeSheet();
+    });
+}
+function presetEdit(edit){
+  const src=edit||{e:'✨',name:'',amount:'',cat:'diger'};let cat=src.cat;
+  openSheet(`<h2>${edit?'Butonu düzenle':'Yeni buton'}</h2>${amountField(src.amount,'Varsayılan tutar')}
+    <div class="two" style="grid-template-columns:72px 1fr"><div class="field"><label for="em">Simge</label><input class="inp" id="em" value="${esc(src.e)}" maxlength="4" style="text-align:center"></div>
+    <div class="field"><label for="nm">Adı</label><input class="inp" id="nm" value="${esc(src.name)}" maxlength="20" placeholder="Örn. Sigara, spor"></div></div>
+    <div class="field"><label>Kategori</label>${catPicker(cat)}</div>
+    <div class="actions">${edit?'<button class="btn del" id="del">Sil</button>':''}<button class="btn ghost" id="back">Geri</button><button class="btn" id="ok">Kaydet</button></div>`,sh=>{
+      bindCatPicker(sh,v=>cat=v);
+      const submit=()=>{
+        const amount=getAmt();const name=sh.querySelector('#nm').value.trim();
+        if(!name){toast('Bir ad yaz');return}if(!(amount>0)){toast('Tutarı gir');return}
+        const e=sh.querySelector('#em').value.trim();
+        if(edit)Object.assign(settings.presets.find(p=>p.id===edit.id),{name,amount,cat,e});
+        else settings.presets.push({id:uid(),name,amount,cat,e});
+        saveSettings();render();presetsSheet();
+      };
+      const getAmt=bindAmount(sh,submit);
+      sh.querySelector('#back').onclick=presetsSheet;
+      sh.querySelector('#ok').onclick=submit;
+      const d=sh.querySelector('#del');
+      if(d)d.onclick=()=>{settings.presets=settings.presets.filter(p=>p.id!==edit.id);saveSettings();render();presetsSheet()};
+    });
+}
+
+/* ---------- events ---------- */
+function panelAction(t){
+  const m=mdoc(cur);
+  if(t.id==='editPresets')return presetsSheet();
+  if(t.id==='addFixed')return fixedSheet(null);
+  if(t.id==='addIncome')return addSheet('in');
+  if(t.dataset.exp)return expenseSheet({edit:m.expenses.find(x=>x.id===t.dataset.exp)});
+  if(t.dataset.inc)return incomeSheet({edit:m.incomes.find(x=>x.id===t.dataset.inc)});
+  if(t.dataset.incf)return incomeSheet({edit:settings.incomeFixed.find(x=>x.id===t.dataset.incf),fixed:true});
+  if(t.dataset.paid){const id=t.dataset.paid;if(m.paid[id])delete m.paid[id];else m.paid[id]=true;saveMonth(cur);render();return}
+  if(t.dataset.fixed)return fixedSheet(settings.fixed.find(f=>f.id===t.dataset.fixed));
+  if(t.dataset.cat){openCat=openCat===t.dataset.cat?null:t.dataset.cat;render()}
+}
+/* handlers bound directly on each element: reliable taps on iOS */
+function bindPanel(){
+  $('#panel').querySelectorAll('[data-preset],[data-exp],[data-inc],[data-incf],[data-paid],[data-fixed],[data-cat],#editPresets,#addFixed,#addIncome').forEach(el=>{
+    if(el.dataset.preset){bindChip(el);return}
+    el.onclick=ev=>{ev.preventDefault();panelAction(el)};
+  });
+}
+function bindChip(el){
+  let timer=null,held=false,sx=0,sy=0;
+  const p=()=>settings.presets.find(x=>x.id===el.dataset.preset);
+  const cancel=()=>{clearTimeout(timer);timer=null;el.classList.remove('hold')};
+  const mn=el.querySelector('[data-minus]');
+  mn.onclick=e=>{e.preventDefault();e.stopPropagation();quickRemove(p())};
+  el.addEventListener('pointerdown',e=>{if(e.target.closest('[data-minus]'))return;held=false;sx=e.clientX;sy=e.clientY;el.classList.add('hold');
+    timer=setTimeout(()=>{held=true;el.classList.remove('hold');if(navigator.vibrate)navigator.vibrate(20);presetAddSheet(p())},450)});
+  el.addEventListener('pointermove',e=>{if(Math.abs(e.clientX-sx)>10||Math.abs(e.clientY-sy)>10)cancel()});
+  ['pointerup','pointercancel','pointerleave'].forEach(t=>el.addEventListener(t,cancel));
+  el.addEventListener('contextmenu',e=>e.preventDefault());
+  el.onclick=e=>{e.preventDefault();if(held){held=false;return}quickAdd(p())};
+}
+function quickRemove(pr){
+  const m=mdoc(cur);
+  const list=m.expenses.filter(e=>e.name===pr.name).sort((a,b)=>(b.created||0)-(a.created||0));
+  if(!list.length)return;
+  const last=list[0];removeExpense(last.id,cur);render();
+  if(navigator.vibrate)navigator.vibrate(10);
+  toast(`${pr.name} silindi, ${money(last.amount)}`,[{label:'Geri al',fn:()=>{mdoc(cur).expenses.push(last);saveMonth(cur);render()}}]);
+}
+/* long-press: change amount before adding */
+function presetAddSheet(pr){
+  let cat=pr.cat,mk=false;
+  openSheet(`<h2>${esc((pr.e||'')+' '+pr.name)}</h2>${amountField(pr.amount)}
+    <div class="field"><label>Kategori</label>${catPicker(cat)}</div>
+    <div class="field"><label for="dt">Tarih</label><input class="inp" id="dt" type="date" value="${defDate()}"></div>
+    <button type="button" class="toggle" id="mk" role="switch" aria-checked="false"><span><b style="font-weight:500">Bu tutarı varsayılan yap</b><br><span class="muted" style="font-size:13px">Sonraki dokunuşlarda bu tutar eklenir</span></span><span class="sw2"></span></button>
+    <div class="actions"><button class="btn" id="ok">Ekle</button></div>`,sh=>{
+      bindCatPicker(sh,v=>cat=v);
+      const t=sh.querySelector('#mk');t.onclick=()=>{mk=!mk;t.setAttribute('aria-checked',mk)};
+      const submit=async()=>{
+        const amount=getAmt();if(!(amount>0)){toast('Tutarı gir');return}
+        const date=sh.querySelector('#dt').value||defDate();const k=date.slice(0,7);
+        if(k!==cur)await ensureMonth(k);
+        addExpense({name:pr.name,amount,cat,e:pr.e,date},k);
+        if(mk){const s=settings.presets.find(x=>x.id===pr.id);if(s){s.amount=amount;s.cat=cat;saveSettings()}}
+        closeSheet();render();toast(`${pr.name} eklendi, ${money(amount)}`);
+      };
+      const getAmt=bindAmount(sh,submit);
+      sh.querySelector('#ok').onclick=submit;
+    });
+}
+document.querySelectorAll('.nav button.t').forEach(b=>b.onclick=()=>{tab=b.dataset.tab;openCat=null;render();window.scrollTo({top:0})});
+$('#plus').onclick=()=>tab==='fixed'?fixedSheet(null):addSheet(tab==='income'?'in':'out');
+async function go(k){cur=k;openCat=null;mdoc(cur);render();await ensureMonth(cur);await ensureMonth(shiftKey(cur,-1));render()}
+$('#prev').onclick=()=>go(shiftKey(cur,-1));
+$('#next').onclick=()=>go(shiftKey(cur,1));
+$('#today').onclick=()=>go(keyOf(new Date()));
+
+/* ---------- boot ---------- */
+mdoc(cur);mdoc(shiftKey(cur,-1));render();
+(async()=>{
+  try{
+    if(!window.claude||!window.claude.use)return;
+    const db=await window.claude.use('db');if(!db)return;
+    const u=await window.claude.use('user');const id=u?await u.id():null;if(!id)return;
+    try{const w=u.can?await u.can('data.write'):null;if(w===false)return;}catch(e){}
+    DB=db;UID=id;
+    const remote=await loadDoc('settings');
+    if(remote&&remote.presets)settings=normSettings(remote);else save('settings',settings);
+    lsSet('settings',settings);
+    for(const k of [cur,shiftKey(cur,-1)]){
+      const local=lsGet('m-'+k);const r=await loadDoc('m-'+k);
+      if(r)months[k]=normMonth(r);
+      else if(local&&(local.expenses?.length||local.incomes?.length||Object.keys(local.paid||{}).length))save('m-'+k,normMonth(local));
+    }
+    render();
+  }catch(e){console.warn(e)}
+})();
+</script>
+
+</body>
+</html>
